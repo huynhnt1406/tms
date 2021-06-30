@@ -5,19 +5,29 @@ import username from '../asset/img/username.png'
 import password from '../asset/img/password.png'
 import {Form, Input} from 'antd'
 import background from '../asset/img/signin.png'
+
+const blockStyle = styled.text`
+    font-family:'Roboto';
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+`
+
+
 const Section =styled.section`
     min-height:100vh;
     background:url(${background}) no-repeat center;
     display:flex;
 `
-
-const Wrapper = styled.section`
+const HeaderTop =styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+`
+const Wrapper = styled(HeaderTop)`
     flex-direction:column;
     flex:0.5;
-
 `
 
 const Image = styled.img`
@@ -32,33 +42,22 @@ const Title = styled.text`
     letter-spacing: 0.15px;
     color: white; 
 `
-const HeaderTop =styled.div`
-    display:flex;
-    justify-content:center;
-    align-items:center;
-`
+
 const Subtitle = styled.text`
     font-family: Roboto;
     font-size: 16px;
     line-height: 28px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.15px;
     color: white;
     margin-bottom:39px;
     margin-top:8px;
 `
-const Header = styled.div`
-    display:flex;
-    justify-content:center;
-    align-items:center;
+const Header = styled(HeaderTop)`
     flex-direction:column
 `
 const formStyle = {
     background: '#FFFFFF',
     border: '1px solid #EBEBEB',
-    boxSizing: 'border-box',
     borderRadius: '4px',
     height:'48px',
     width:'448px'
@@ -72,17 +71,10 @@ const Button = styled.button`
     font-weight: bold;
     font-size: 16px;
     line-height: 19px;
-    text-align: center;
     color: #FFFFFF;
-    border: none;
-`
-const ForgotPass = styled.text`    
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
-    color: white;
+    border:none;
+`   
+const ForgotPass = styled(blockStyle)`    
 `
 function SignIn() {
     return (
