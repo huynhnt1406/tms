@@ -13,8 +13,6 @@ const blockStyle = styled.text`
     font-size: 16px;
     line-height: 19px;
 `
-
-
 const Section =styled.section`
     min-height:100vh;
     background:url(${background}) no-repeat center;
