@@ -1,14 +1,15 @@
 
 import styled from "styled-components";
-import SignIn from "./components/SignIn";
 import 'antd/dist/antd.css';
+import OrderDetail from "./components/OrderDetail";
+
 const AppContainer = styled.div`
 `
 
 function App() {
   return (
     <AppContainer>
-      <SignIn/>
+      <OrderDetail/>
     </AppContainer>
   );
 }

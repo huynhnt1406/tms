@@ -1,79 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
 import logo from '../asset/img/logo.png'
 import username from '../asset/img/username.png'
 import password from '../asset/img/password.png'
 import {Form, Input} from 'antd'
-import background from '../asset/img/signin.png'
-
-const blockStyle = styled.text`
-    font-family:'Roboto';
-    color:white;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
-`
-const Section =styled.section`
-    min-height:100vh;
-    background:url(${background}) no-repeat center;
-    display:flex;
-`
-const HeaderTop =styled.div`
-    display:flex;
-    justify-content:center;
-    align-items:center;
-`
-const Wrapper = styled(HeaderTop)`
-    flex-direction:column;
-    flex:0.5;
-`
-
-const Image = styled.img`
-    background-color:#367BF5;
-    border-radius:4px;
-    margin-right:9px;
-`
-const Title = styled.text`
-    font-family: Fredoka One;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0.15px;
-    color: white; 
-`
-
-const Subtitle = styled.text`
-    font-family: Roboto;
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: 0.15px;
-    color: white;
-    margin-bottom:39px;
-    margin-top:8px;
-`
-const Header = styled(HeaderTop)`
-    flex-direction:column
-`
-const formStyle = {
-    background: '#FFFFFF',
-    border: '1px solid #EBEBEB',
-    borderRadius: '4px',
-    height:'48px',
-    width:'448px'
-}
-const Button = styled.button`
-    background: #367BF5;
-    border-radius: 4px;
-    width:448px;
-    height:48px;
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FFFFFF;
-    border:none;
-`   
-const ForgotPass = styled(blockStyle)`    
-`
+import {Section,Wrapper,HeaderTop, Header,ForgotPass,Button,Subtitle,Title,Image,formStyle} from '../styles/SignIn'
 function SignIn() {
     return (
         <Section>
