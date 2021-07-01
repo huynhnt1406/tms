@@ -12,6 +12,7 @@ const fontStyle = {
 
 const ImageOrder = styled(Image)`
     padding:4px;
+    margin:0;
 `
 const TitleOrder = styled.span`
     font-family: Fredoka One;
@@ -19,5 +20,6 @@ const TitleOrder = styled.span`
     line-height: 28px;
     letter-spacing: 0.15px;
     color: #367BF5 ;
+    margin-left:0;
 `
 export {fontStyle,TitleOrder,ImageOrder}

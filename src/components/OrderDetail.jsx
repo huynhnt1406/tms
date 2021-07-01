@@ -16,39 +16,38 @@ function OrderDetail() {
     return (
         <Layout style={{height:'100vh'}}>
         <Sider trigger={null} style={{width:'236px'}} collapsible collapsed={collapsed}>
-                <HeaderTop style={{background:'white', paddingTop:'12px',paddingBottom:'21px'}}>
-                    <ImageOrder alt="home-img" src={homeimage}/>
-                    <TitleOrder>CRM System</TitleOrder>
-            </HeaderTop>
           <Menu theme="light" style={fontStyle} mode="inline" defaultSelectedKeys={['1']}>
-            <Menu.Item key="1" icon={<PieChartFilled />}>
+            <Menu.Item icon={<ImageOrder alt="home-img" src={homeimage} style={{marginLeft:'-10px',textAlign:'center'}}/>}>
+                <TitleOrder>CRM System</TitleOrder>
+            </Menu.Item>
+            <Menu.Item key="1" icon={<PieChartFilled style={{color:' #78909C'}} />}>
               Dashboard
             </Menu.Item>
-            <Menu.Item key="2" icon={<VideoCameraFilled />}>
+            <Menu.Item key="2" icon={<VideoCameraFilled style={{color:' #78909C'}} />}>
               Monitor
             </Menu.Item>
-            <Menu.Item key="3" icon={<UserOutlined />}>
+            <Menu.Item key="3" icon={<UserOutlined style={{color:' #78909C'}} />}>
               Customers
             </Menu.Item>
-            <Menu.Item key="4" icon={<NotificationOutlined />}>
+            <Menu.Item key="4" icon={<NotificationOutlined style={{color:' #78909C'}} />}>
               Campaigns
             </Menu.Item>
-            <Menu.Item key="5" icon={<ProfileFilled />}>
+            <Menu.Item key="5" icon={<ProfileFilled  style={{color:' #78909C'}}/>}>
               Orders
             </Menu.Item>
-            <Menu.Item key="6" icon={<PhoneFilled />}>
+            <Menu.Item key="6" icon={<PhoneFilled  style={{color:' #78909C'}}/>}>
               Callback
             </Menu.Item>
-            <Menu.Item key="7" icon={<DropboxOutlined />}>
+            <Menu.Item key="7" icon={<DropboxOutlined  style={{color:' #78909C'}}/>}>
                 Products
           </Menu.Item>
-          <Menu.Item key="8" icon={<BarChartOutlined />}>
+          <Menu.Item key="8" icon={<BarChartOutlined style={{color:' #78909C'}} />}>
                 Reports
           </Menu.Item>
-          <Menu.Item key="9" icon={<ApiOutlined />}>
+          <Menu.Item key="9" icon={<ApiOutlined style={{color:' #78909C'}} />}>
             System Configuration
           </Menu.Item>
-          <Menu.Item key="10" icon={<SettingFilled />}>
+          <Menu.Item key="10" icon={<SettingFilled  style={{color:' #78909C'}}/>}>
             Settings
           </Menu.Item>
           </Menu>
