@@ -1,11 +1,15 @@
 import React ,{useState}from 'react'
-import { Layout, Menu } from 'antd';
+import { Layout, Menu,Avatar } from 'antd';
 import {PieChartFilled,VideoCameraFilled,UserOutlined,NotificationOutlined,ProfileFilled,PhoneFilled,DropboxOutlined,BarChartOutlined,ApiOutlined,SettingFilled} from '@ant-design/icons'
-import {MenuUnfoldOutlined, MenuFoldOutlined} from '@ant-design/icons'
-import {fontStyle} from '../styles/OrderDetail'
+import {MenuUnfoldOutlined, MenuFoldOutlined ,MailOutlined ,BellOutlined} from '@ant-design/icons'
+import {fontStyle, HeaderRight, SidebarTop} from '../styles/OrderDetail'
 import homeimage from '../asset/img/homeimg.png'
-import {HeaderTop} from '../styles/SignIn'
-import {ImageOrder, TitleOrder} from '../styles/OrderDetail'
+import {ImageOrder ,TitleOrder} from '../styles/OrderDetail'
+import { Badge } from 'antd';
+import avatar from '../asset/img/avatar1.jpg'
+import OrderProcessing from '../views/OrderProcessing';
+
+
 const { Header, Sider, Content } = Layout;
 function OrderDetail() {
     const [collapsed, setCollapsed] = useState(false)
@@ -15,12 +19,14 @@ function OrderDetail() {
     }
     return (
         <Layout style={{height:'100vh'}}>
-        <Sider trigger={null} style={{width:'236px'}} collapsible collapsed={collapsed}>
-          <Menu theme="light" style={fontStyle} mode="inline" defaultSelectedKeys={['1']}>
-            <Menu.Item icon={<ImageOrder alt="home-img" src={homeimage} style={{marginLeft:'-10px',textAlign:'center'}}/>}>
-                <TitleOrder>CRM System</TitleOrder>
+        <Sider trigger={null}  collapsible collapsed={collapsed}>
+          <Menu theme="light" mode="inline"  style={SidebarTop} >
+            <Menu.Item icon={<img alt="" src={homeimage} style={ImageOrder}/>}>
+              <span style={TitleOrder}>CRM System</span>
             </Menu.Item>
-            <Menu.Item key="1" icon={<PieChartFilled style={{color:' #78909C'}} />}>
+            </Menu>
+          <Menu theme="light" style={fontStyle} mode="inline" defaultSelectedKeys={['1']}>
+            <Menu.Item key="1" icon={<PieChartFilled style={{color:' #78909C'}} />} >
               Dashboard
             </Menu.Item>
             <Menu.Item key="2" icon={<VideoCameraFilled style={{color:' #78909C'}} />}>
@@ -53,20 +59,28 @@ function OrderDetail() {
           </Menu>
         </Sider>
         <Layout className="site-layout">
-          <Header   style={{ background:'white', paddingLeft:'10px'}}>
-            {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-              className: 'trigger',
-              onClick: toggle,
-            })}
+          <Header   style={{display:'flex', justifyContent:'space-between', alignItems:'center', background:'white'}}>
+            <span onClick={toggle} style={{color:'#DADADA', margin:'0 !important', marginLeft:'-20px' }}>{collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined/> }</span>
+            <HeaderRight>
+              <Badge count={100} style={{fontSize:'8px'}}>
+                <MailOutlined style={{fontSize:'24px',color:' #78909C'}} />
+              </Badge>
+              <Badge count={100} style={{fontSize:'8px'}}>
+                <BellOutlined style={{fontSize:'24px', marginLeft:'33px',color:' #78909C'}} />
+              </Badge>
+              <Avatar size={40} style={{marginLeft:'33px'}} src={avatar} />
+            </HeaderRight>
           </Header>
           <Content
             style={{
-              margin: '24px 16px',
-              padding: 24,
+              margin: '10px 10px',
+              padding:'0 10px 10px 10px',
               minHeight: 280,
+              background:'white',
+              overflow:'scroll'
             }}
           >
-            Content
+          <OrderProcessing/>
           </Content>
         </Layout>
       </Layout>

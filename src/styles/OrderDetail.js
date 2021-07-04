@@ -1,25 +1,36 @@
 import styled from 'styled-components'
-import {Image} from '../styles/SignIn'
 const fontStyle = { 
     fontFamily:'Roboto',
     fontWeight:'400',
-    fontSize:'12px',
+    fontSize:'13px',
     lineHeight:'20px',
     letterSpacing:'0.25px',
     color:'#000000',
-    height:'100%',
+    height:'91vh',
 }
 
-const ImageOrder = styled(Image)`
-    padding:4px;
-    margin:0;
+const ImageOrder = {
+    padding:'4px',
+    backgroundColor:'#367BF5',
+    borderRadius:'4px',
+    marginLeft:'-7px'
+}
+const TitleOrder = {
+    fontFamily: 'Fredoka One',
+    fontSize: '18.5px',
+    letterSpacing: '0.15px',
+    color: '#367BF5' 
+}
+const HeaderRight = styled.div`
+    display:flex;
+    justify-content:center;
+    align-items:center;
 `
-const TitleOrder = styled.span`
-    font-family: Fredoka One;
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 0.15px;
-    color: #367BF5 ;
-    margin-left:0;
-`
-export {fontStyle,TitleOrder,ImageOrder}
+const SidebarTop = {
+    height:'65px',
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+}
+
+export {fontStyle,TitleOrder,ImageOrder, HeaderRight, SidebarTop}
