@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
     display:flex;
     width:100%;
+    flex-wrap:wrap;
 `
 const ContainerLeft = styled.div`
     flex:0.5;

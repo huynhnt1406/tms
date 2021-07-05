@@ -8,6 +8,9 @@ import {ImageOrder ,TitleOrder} from '../styles/OrderDetail'
 import { Badge } from 'antd';
 import avatar from '../asset/img/avatar1.jpg'
 import CampaignConfig from '../views/CampaignConfig'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import OrderProcessing from '../views/OrderProcessing';
+import OrderList from '../views/OrderList'
 const { Header, Sider, Content } = Layout;
 function OrderDetail() {
     const [collapsed, setCollapsed] = useState(false)

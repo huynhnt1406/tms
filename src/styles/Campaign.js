@@ -60,12 +60,14 @@ const ButtonField = styled(CampaignContent)`
     margin:0;
     padding:0 24px 0 24px;
     height:64px;
-    border-top:1px solid #E7EEF0
+    border-top:1px solid #E7EEF0;
+    display:flex;
+    flex-wrap:wrap;
 `
 const FieldLeft = styled.div`
 `
 const FieldRight = styled(ButtonField)`
-
+    display:flex;
 `
 const CampaignSteps = styled(CampaignClass)``
 
