@@ -7,9 +7,7 @@ import homeimage from '../asset/img/homeimg.png'
 import {ImageOrder ,TitleOrder} from '../styles/OrderDetail'
 import { Badge } from 'antd';
 import avatar from '../asset/img/avatar1.jpg'
-import OrderProcessing from '../views/OrderProcessing';
 import CampaignConfig from '../views/CampaignConfig'
-import OrderList from '../views/OrderList';
 const { Header, Sider, Content } = Layout;
 function OrderDetail() {
     const [collapsed, setCollapsed] = useState(false)
@@ -18,8 +16,8 @@ function OrderDetail() {
         setCollapsed(!collapsed)
     }
     return (
-        <Layout style={{height:'100vh'}}>
-        <Sider trigger={null}  collapsible collapsed={collapsed}>
+        <Layout>
+        <Sider trigger={null}  theme="light" collapsible collapsed={collapsed}>
           <Menu theme="light" mode="inline"  style={SidebarTop} >
             <Menu.Item icon={<img alt="" src={homeimage} style={ImageOrder}/>}>
               <span style={TitleOrder}>CRM System</span>

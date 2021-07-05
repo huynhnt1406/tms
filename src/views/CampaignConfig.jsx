@@ -1,45 +1,55 @@
 import React, { useState } from 'react'
 import { Steps, message, Breadcrumb } from 'antd';
-import {CampaignClass,CampaignHeader ,CampaignTitle, StepsStyle,ButtonNext,ButtonPre, Cancel,ButtonField,FieldLeft,FieldRight,CampaignSteps} from '../styles/Campaign'
-import {ArrowRightOutlined,ArrowLeftOutlined} from '@ant-design/icons';
+import {
+    CampaignClass, CampaignHeader, CampaignTitle, StepsStyle,
+    ButtonNext,
+    ButtonPre, Cancel,
+    ButtonField, FieldLeft, FieldRight, CampaignSteps, CampaignContent
+} from '../styles/Campaign'
+import { ArrowRightOutlined, ArrowLeftOutlined } from '@ant-design/icons';
+import CampaignName from '../components/CampaignElements/CampaignName';
+import CallingLists from '../components/CampaignElements/CallingLists';
+import CallStrategy from '../components/CampaignElements/CallStrategy';
+import AgentGroups from '../components/CampaignElements/AgentGroups';
+import DistributionRule from '../components/CampaignElements/DistributionRule';
+import Summary from '../components/CampaignElements/Summary';
 function CampaignConfig() {
     const { Step } = Steps;
-
     const steps = [
-    {
-        title:'Campaign Name',
-        content: 'hi',
-    },
-    {
-        title: 'Calling Lists',
-        content: 'Second-content',
-    },
-    {
-        title: 'Call Strategy',
-        content: 'Last-content',
-    },
-    {
-        title: 'Distribution Rule',
-        content: 'Last-content',
-    },
-    {
-        title: 'Agent Groups',
-        content: 'Last-content',
-    },
-    {
-        title: 'Summary',
-        content: 'Last-content',
-    },
+        {
+            title: 'Campaign Name',
+            content: <CampaignName />,
+        },
+        {
+            title: 'Calling Lists',
+            content: <CallingLists/>,
+        },
+        {
+            title: 'Call Strategy',
+            content: <CallStrategy/>,
+        },
+        {
+            title: 'Distribution Rule',
+            content: <DistributionRule/>,
+        },
+        {
+            title: 'Agent Groups',
+            content:<AgentGroups/>,
+        },
+        {
+            title: 'Summary',
+            content:<Summary/> 
+        },
     ];
     const [current, setCurrent] = useState(0)
     const next = () => {
         setCurrent(current + 1);
-      };
-    
-      const prev = () => {
+    };
+
+    const prev = () => {
         setCurrent(current - 1);
-      };
-    
+    };
+
     return (
         <CampaignClass>
             <CampaignHeader>
@@ -52,33 +62,35 @@ function CampaignConfig() {
             </CampaignHeader>
             <CampaignSteps>
                 <Steps current={current} size="small" style={StepsStyle} >
-                        {steps.map(item => (
+                    {steps.map(item => (
                         <Step key={item.title} title={item.title}  />
-                        ))}
-                    </Steps>
-                    <div >{steps[current].content}</div>
-                    <ButtonField >
-                        <FieldLeft>
-                            <Cancel>Cancel</Cancel>
-                        </FieldLeft>
-                        <FieldRight>
-                        {current >= 0 && (
+                    ))}
+                </Steps>
+                <CampaignContent  >
+                    {steps[current].content}
+                </CampaignContent>
+                <ButtonField >
+                    <FieldLeft>
+                        <Cancel>Cancel</Cancel>
+                    </FieldLeft>
+                    <FieldRight>
+                        {current > 0 && (
                             <ButtonPre style={{ margin: '0 8px' }} onClick={() => prev()}>
-                            <ArrowLeftOutlined /> Back
+                                <ArrowLeftOutlined /> Back
                             </ButtonPre>
-                            )}
-                            {current === steps.length - 1 && (
+                        )}
+                        {current === steps.length - 1 && (
                             <ButtonNext type="primary" onClick={() => message.success('Processing complete!')}>
                                 Done
                             </ButtonNext>
-                            )}
-                            {current < steps.length - 1 && (
-                                <ButtonNext type="primary" onClick={() => next()}>
-                                    Next <ArrowRightOutlined />
-                                </ButtonNext>
-                                )}
-                        </FieldRight>
-                    </ButtonField>
+                        )}
+                        {current < steps.length - 1 && (
+                            <ButtonNext type="primary" onClick={() => next()}>
+                                Next <ArrowRightOutlined />
+                            </ButtonNext>
+                        )}
+                    </FieldRight>
+                </ButtonField>
             </CampaignSteps>
         </CampaignClass>
     )

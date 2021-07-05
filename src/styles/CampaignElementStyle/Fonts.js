@@ -12,11 +12,18 @@ const InputFont = styled(MainFont)`
     font-size: 16px;
     line-height: 28px;
 `
-const ListFont = style(InputFont)`
+const ListFont = styled(InputFont)`
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.44px;
+`
+const RadioFont = styled(ListFont)`
+    font-weight: 400;
+    text-transform:uppercase;
+`
+const ItemFont = styled(ListFont)`
+    font-weight:400;
 `
 const SearchFont = styled(ListFont)`
     color: #919699;
@@ -28,6 +35,7 @@ const ElementFont = styled(InputFont)`
 `
 const TableFont = styled.span`
     font-family: Roboto;
+    font-weight:400;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.25px;
@@ -38,4 +46,4 @@ const NumberStyle = styled(TableFont)`
     color: #000000;
 `
 
-export {NumberStyle,TableFont,ElementFont,SearchFont,ListFont,InputFont ,MainFont}
+export {NumberStyle,TableFont,ElementFont,SearchFont,ListFont,InputFont ,MainFont,ItemFont,RadioFont}

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {OrderTitle} from '../styles/OrderList'
+import { OrderTitle } from '../styles/OrderList'
 
 const CampaignTitle = styled(OrderTitle)`
     font-size:18px;
@@ -14,14 +14,12 @@ const CampaignHeader = styled(CampaignClass)`
     border-bottom:1px solid #E3E4E5;
 `
 const StepsStyle = {
-    padding:'20px 15px',
-    backgroundColor : ' #DAF5F2',
-    border:'1px solid #069697',
-    borderRadius:'6px'
+    padding: '20px 15px',
+    backgroundColor:  '#DAF5F2',
+    border: '1px solid #069697',
+    borderRadius: '6px'
 }
-const StepStyle = {
-    color:' #7BC6BD'
-}
+
 const FontCampaign = styled.span`
     font-family: Roboto;
     font-size: 16px;
@@ -50,16 +48,29 @@ const Cancel = styled(ButtonNext)`
     color:#F7685B;
     border:none;
 `
-const ButtonField = styled.div`
+const CampaignContent = styled.div`
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
+    margin-top:30px;
+`
+const ButtonField = styled(CampaignContent)`
+    justify-content:space-between;
     background:white;
+    margin:0;
+    padding:0 24px 0 24px;
+    height:64px;
+    border-top:1px solid #E7EEF0
 `
 const FieldLeft = styled.div`
 `
-const FieldRight =styled(ButtonField)`
+const FieldRight = styled(ButtonField)`
 
 `
 const CampaignSteps = styled(CampaignClass)``
-export {CampaignClass,CampaignHeader ,CampaignTitle, StepsStyle,StepStyle,FontCampaign,ButtonNext,ButtonPre, Cancel,ButtonField,FieldLeft,FieldRight,CampaignSteps}
+
+
+export {
+    CampaignClass, CampaignHeader, CampaignTitle, StepsStyle, FontCampaign, ButtonNext, ButtonPre, Cancel, ButtonField,
+    FieldLeft, FieldRight, CampaignSteps, CampaignContent, 
+}
