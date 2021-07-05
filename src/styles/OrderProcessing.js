@@ -65,13 +65,13 @@ const OrderLeft = styled(OrderRight)`
 const BodyProcessing = styled.div`
     display:flex;
     margin-left:10px;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 `
 const BodyLeft = styled.div`
-    flex:0.5;
+    width:47%;
 `
 const BodyRight = styled.div`
-    flex:0.5;
+    width:53%;
     border-radius:10px;
     padding:5px;
 `

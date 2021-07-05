@@ -8,8 +8,8 @@ import {ImageOrder ,TitleOrder} from '../styles/OrderDetail'
 import { Badge } from 'antd';
 import avatar from '../asset/img/avatar1.jpg'
 import OrderProcessing from '../views/OrderProcessing';
-
-
+import CampaignConfig from '../views/CampaignConfig'
+import OrderList from '../views/OrderList';
 const { Header, Sider, Content } = Layout;
 function OrderDetail() {
     const [collapsed, setCollapsed] = useState(false)
@@ -76,11 +76,12 @@ function OrderDetail() {
               margin: '10px 10px',
               padding:'0 10px 10px 10px',
               minHeight: 280,
-              background:'white',
-              overflow:'scroll'
+              background:'#F0F2F5',
+              overflow:'scroll',
+              position:'relative',
             }}
           >
-          <OrderProcessing/>
+          <CampaignConfig/>
           </Content>
         </Layout>
       </Layout>

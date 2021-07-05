@@ -3,8 +3,8 @@ import {Breadcrumb} from 'antd'
 import { Wrapper , OrderRight} from '../styles/OrderList'
 import {OrderLeft, ButtonSave, HeaderProcessing, Trash,Uncalled, Approved, Rejected, ButtonAct, TitleProcess,BodyProcessing, BodyLeft , BodyRight,TableHeader,TitleTable,AddProduct,TableFooter} from '../styles/OrderProcessing'
 import {ProductInfo,TableProduct} from '../styles/Contact'
-import {Table,Cascader, Input, Button} from 'antd'
-import {EllipsisOutlined,CheckOutlined , DeleteOutlined } from '@ant-design/icons'
+import {Table,Cascader, Input, Button,Tabs} from 'antd'
+import {EllipsisOutlined,CheckOutlined , DeleteOutlined,FrownOutlined } from '@ant-design/icons'
 import alertinfo from '../asset/img/alert.jpg'
 import Tags from '../components/Tags'
 function OrderProcessing() {
@@ -48,6 +48,12 @@ function OrderProcessing() {
         },
     ];
     const data = []
+    const { TabPane } = Tabs;
+
+    function callback(key) {
+    console.log(key);
+    }
+
     return (
             <Wrapper>
                 <HeaderProcessing>
@@ -69,7 +75,7 @@ function OrderProcessing() {
                     </OrderRight>
                 </HeaderProcessing>
                 <BodyProcessing>
-                    <BodyLeft style={{fontSize:'10px;'}}>
+                    <BodyLeft style={{backgroundColor:'#F7F9FA', padding:'5px'}}>
                         <Tags/>
                     </BodyLeft>
                     <BodyRight >
@@ -90,7 +96,13 @@ function OrderProcessing() {
                             </TableFooter>  
                         </TableProduct>
                         <ProductInfo>
-                            hi
+                            <Tabs defaultActiveKey="1" onChange={callback} style={{height:'180px'}}>
+                                <TabPane tab="Product description" key="1" style={{textAlign:'center' , color:'#C6CACC'}}>
+                                    <FrownOutlined />No data found in the server
+                                </TabPane>
+                                <TabPane tab="Agent Script" key="2">
+                                </TabPane>
+                            </Tabs>
                         </ProductInfo>
                     </BodyRight>
                 </BodyProcessing>

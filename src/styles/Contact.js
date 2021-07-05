@@ -44,15 +44,20 @@ const Field = styled.div`
     flex-direction:column;
 `
 const TableProduct = styled(Field)`
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.5), 0px 2px 4px rgba(54, 123, 245, 0.24);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.5), 0px 2px 4px rgba(54, 123, 245, 0.24);
     border-radius:10px;
     padding:5px;
 `
 const ProductInfo =styled.div`
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.5), 0px 2px 4px rgba(54, 123, 245, 0.24);
+    border-radius:10px;
+    padding:5px;
+    margin-top:10px;
 `
 const Child = styled.div`
     display:flex;
     align-items:center;
+    flex-wrap:wrap;
 `
 const ChildLeft = styled.div`
     flex:0.25;
