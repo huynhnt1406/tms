@@ -8,7 +8,9 @@ const CampaignTitle = styled(OrderTitle)`
 const CampaignClass = styled.div`
     display:flex;
     flex-direction:column;
+    position:relative;
 `
+const ProgressContainer = styled(CampaignClass)``
 const CampaignHeader = styled(CampaignClass)`
     padding:9px 16px 5px 16px;
     border-bottom:1px solid #E3E4E5;
@@ -74,5 +76,5 @@ const CampaignSteps = styled(CampaignClass)``
 
 export {
     CampaignClass, CampaignHeader, CampaignTitle, StepsStyle, FontCampaign, ButtonNext, ButtonPre, Cancel, ButtonField,
-    FieldLeft, FieldRight, CampaignSteps, CampaignContent, 
+    FieldLeft, FieldRight, CampaignSteps, CampaignContent,ProgressContainer 
 }

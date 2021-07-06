@@ -11,6 +11,7 @@ import CampaignConfig from '../views/CampaignConfig'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import OrderProcessing from '../views/OrderProcessing';
 import OrderList from '../views/OrderList'
+import CampaignManagement from '../views/CampaignManagement';
 const { Header, Sider, Content } = Layout;
 function OrderDetail() {
     const [collapsed, setCollapsed] = useState(false)
@@ -82,7 +83,7 @@ function OrderDetail() {
               position:'relative',
             }}
           >
-          <CampaignConfig/>
+          <CampaignManagement/>
           </Content>
         </Layout>
       </Layout>

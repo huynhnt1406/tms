@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { ButtonNext } from '../Campaign'
+import { Button } from '../OrderList'
 const Input = styled.input`
     background: #F7F9FA;
     border-radius: 4px 4px 0px 0px;
@@ -84,4 +85,8 @@ const  RadioStyle = {
 const DescStyle = {
     backgroundColor:'#F7F9FA',
 }
-export {Input,ChangeDate,CampaignNameStyle,CampaignForm ,CallingListsStyle ,CallStrategyStyle,RuleStyle,AgentGroupsStyle,SummaryStyle,SearchField ,RemoveButton,RadioStyle,DescStyle}
+const NewCampaign = styled(Button)`
+    width:154px;
+`
+
+export {Input,ChangeDate,CampaignNameStyle,CampaignForm ,CallingListsStyle ,CallStrategyStyle,RuleStyle,AgentGroupsStyle,SummaryStyle,SearchField ,RemoveButton,RadioStyle,DescStyle,NewCampaign}

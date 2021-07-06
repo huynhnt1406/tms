@@ -4,6 +4,7 @@ import {SearchOutlined} from '@ant-design/icons'
 import {OrderTitle, Wrapper, Header, OrderRight,inputStyle, Button} from '../styles/OrderList'
 import {Table,Tag} from 'antd'
 import {InfoCircleOutlined, EllipsisOutlined} from '@ant-design/icons'
+import { TableFont,ElementTable } from '../styles/CampaignElementStyle/Fonts'
 function OrderList() {
     const [selectedRowKeys] = useState([])
     const data = [];
@@ -11,25 +12,28 @@ function OrderList() {
     const columns = [
         {
         key:'LEADID',
-        title: 'LEAD ID',
+        title: <TableFont>LEAD ID</TableFont>,
         dataIndex: 'LEADID',
         sorter: (a, b) => a.age - b.age,
+        render: (LEADID) => <ElementTable>{LEADID}</ElementTable>
         },
         {
         key:'name',
-        title: 'CUSTOMER NAME',
+        title: <TableFont>CUSTOMER NAME</TableFont>,
         dataIndex: 'name',
         sorter: (a, b) => a.name - b.name,
+        render: name => <ElementTable>{name}</ElementTable>
         },
         {
         key:'productname',
-        title: 'PRODUCT NAME',
+        title:<TableFont>PRODUCT NAME</TableFont> ,
         dataIndex: 'productname',
         sorter: (a, b) => a.productname - b.productname,
+        render: (productname) =><ElementTable>{productname}</ElementTable>
         },
         {
             key:'statuses',
-            title: 'STATUS',
+            title:<TableFont>STATUS</TableFont> ,
             dataIndex: 'statuses',
             sorter: (a, b) => a.age - b.age,
             render:statuses => (
@@ -67,16 +71,17 @@ function OrderList() {
         },
         {
             key:'codfee',
-            title: 'COD FEE',
+            title: <TableFont>COD FEE</TableFont>,
             dataIndex: 'codfee',
             sorter: (a, b) => a.codfee - b.codfee,
-            render: codfee => <span>{codfee}đ</span>,
+            render: codfee => <ElementTable>{codfee}đ</ElementTable>,
         },
         {
             key:'address',
-            title: 'ADDRESS',
+            title: <TableFont>ADDRESS</TableFont>,
             dataIndex: 'address',
             sorter: (a, b) => a.address - b.address,
+            render: (address) => <ElementTable>{address}</ElementTable>
         },
         {
             key:'',
