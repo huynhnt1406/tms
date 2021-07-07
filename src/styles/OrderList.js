@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Input} from 'antd'
    const OrderTitle = styled.h4`
    font-family: Roboto;
    font-size: 24px;
@@ -27,17 +28,18 @@ const Button = styled.button`
    border:none;
    margin-left:10px;
 `
-const inputStyle = {
-   background: '#F7F9FA !important',
-   borderRadius: '4px',
-   width:'230px',
-   height:'36px',
-
-}
+const InputStyle  = styled(Input)`
+   background-color: #F7F9FA !important,
+   border-radius: 4px,
+   width:230px,
+   height:36px,
+`
 const Header = styled.div`
    display:flex;
    justify-content:space-between;
    align-items:center;
+   padding:18px;
+   backgroun-color:white;
 `
 
-export {Header, Wrapper, OrderRight,OrderTitle,Button,inputStyle}
+export {Header, Wrapper, OrderRight,OrderTitle,Button , InputStyle}

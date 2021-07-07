@@ -1,94 +1,94 @@
 import React from 'react'
-import {Input,Table,Badge, Progress} from 'antd'
+import {Table,Badge, Progress} from 'antd'
 import {PlusOutlined,SearchOutlined,EllipsisOutlined} from '@ant-design/icons'
 import { ProgressContainer } from '../styles/Campaign'
-import {OrderTitle, Wrapper, Header, OrderRight,inputStyle} from '../styles/OrderList'
+import {OrderTitle, Wrapper, Header, OrderRight, InputStyle} from '../styles/OrderList'
 import {NewCampaign} from '../styles/CampaignElementStyle/Elements'
 import { ManageFont , TableFont } from '../styles/CampaignElementStyle/Fonts'
-import {NumberStyle ,ElementTable} from '../styles/CampaignElementStyle/Fonts'
+import {ElementTable} from '../styles/CampaignElementStyle/Fonts'
+const data = [
+    {
+        key:1,
+        id:125921,
+        campaignname:'Aaron Jerde',
+        starttime: '2909-11-25 13:00',
+        endtime : '1909-11-25 11:02',
+        statustype:'Stopped',
+        progress : 10,
+        outboundagent:23
+    },
+    {
+        key:2,
+        id:116722,
+        campaignname:'Aaron Schultz',
+        starttime: '2909-11-25 13:00',
+        endtime : '1909-11-25 11:02',
+        statustype:'Stopped',
+        progress : 30,
+        outboundagent:35
+    },
+    {
+        key:3,
+        id:125921,
+        campaignname:'Aaron Jerde',
+        starttime: '2909-11-25 13:00',
+        endtime : '1909-11-25 11:02',
+        statustype:'Running',
+        progress : 20,
+        outboundagent:45
+    },
+    {
+        key:4,
+        id:125921,
+        campaignname:'Aaron Jerde',
+        starttime: '2909-11-25 13:00',
+        endtime : '1909-11-25 11:02',
+        statustype:'Running',
+        progress : 50,
+        outboundagent:68
+    },
+    {
+        key:5,
+        id:125921,
+        campaignname:'Aaron Jerde',
+        starttime: '2909-11-25 13:00',
+        endtime : '1909-11-25 11:02',
+        statustype:'Waiting',
+        progress : 40,
+        outboundagent:12
+    },
+    {
+        key:6,
+        id:125921,
+        campaignname:'Aaron Jerde',
+        starttime: '2909-11-25 13:00',
+        endtime : '1909-11-25 11:02',
+        statustype:'Running',
+        progress : 100,
+        outboundagent:68
+    },
+    {
+        key:7,
+        id:125921,
+        campaignname:'Aaron Jerde',
+        starttime: '2909-11-25 13:00',
+        endtime : '1909-11-25 11:02',
+        statustype:'Waiting',
+        progress : 80,
+        outboundagent:12
+    },
+    {
+        key:8,
+        id:125921,
+        campaignname:'Aaron Jerde',
+        starttime: '2909-11-25 13:00',
+        endtime : '1909-11-25 11:02',
+        statustype:'Waiting',
+        progress : 90,
+        outboundagent:12
+    }
+]
 function CampaignManagement() {
-    const data = [
-        {
-            key:1,
-            id:125921,
-            campaignname:'Aaron Jerde',
-            starttime: '2909-11-25 13:00',
-            endtime : '1909-11-25 11:02',
-            statustype:'Stopped',
-            progress : 10,
-            outboundagent:23
-        },
-        {
-            key:2,
-            id:116722,
-            campaignname:'Aaron Schultz',
-            starttime: '2909-11-25 13:00',
-            endtime : '1909-11-25 11:02',
-            statustype:'Stopped',
-            progress : 30,
-            outboundagent:35
-        },
-        {
-            key:3,
-            id:125921,
-            campaignname:'Aaron Jerde',
-            starttime: '2909-11-25 13:00',
-            endtime : '1909-11-25 11:02',
-            statustype:'Running',
-            progress : 20,
-            outboundagent:45
-        },
-        {
-            key:4,
-            id:125921,
-            campaignname:'Aaron Jerde',
-            starttime: '2909-11-25 13:00',
-            endtime : '1909-11-25 11:02',
-            statustype:'Running',
-            progress : 50,
-            outboundagent:68
-        },
-        {
-            key:5,
-            id:125921,
-            campaignname:'Aaron Jerde',
-            starttime: '2909-11-25 13:00',
-            endtime : '1909-11-25 11:02',
-            statustype:'Waiting',
-            progress : 40,
-            outboundagent:12
-        },
-        {
-            key:6,
-            id:125921,
-            campaignname:'Aaron Jerde',
-            starttime: '2909-11-25 13:00',
-            endtime : '1909-11-25 11:02',
-            statustype:'Running',
-            progress : 100,
-            outboundagent:68
-        },
-        {
-            key:7,
-            id:125921,
-            campaignname:'Aaron Jerde',
-            starttime: '2909-11-25 13:00',
-            endtime : '1909-11-25 11:02',
-            statustype:'Waiting',
-            progress : 80,
-            outboundagent:12
-        },
-        {
-            key:8,
-            id:125921,
-            campaignname:'Aaron Jerde',
-            starttime: '2909-11-25 13:00',
-            endtime : '1909-11-25 11:02',
-            statustype:'Waiting',
-            progress : 90,
-            outboundagent:12
-        }
-    ]
     const columns = [
         {
         key:'id',
@@ -123,14 +123,18 @@ function CampaignManagement() {
             dataIndex: 'statustype',
             render: (statustype) => {
                 let status= '';
-                if(statustype === 'Stopped'){
-                    status = "error"
-                }
-                if(statustype === 'Running'){
-                    status = "success"
-                }
-                if(statustype === 'Waiting'){
-                    status = "warning"
+                switch (statustype) {
+                    case 'Stopped':
+                        status = "error"
+                        break;
+                    case 'Running':
+                        status = "success"
+                        break;
+                    case 'Waiting':
+                        status = "warning"
+                        break;
+                    default:
+                        break;
                 }
                 return(
                     <ElementTable><Badge size="default"  status={status} text={statustype}></Badge></ElementTable>
@@ -143,20 +147,25 @@ function CampaignManagement() {
             dataIndex: 'progress',
             render: (progress) => {
                 let color = '';
-                if(progress === 100){
-                    color = '#4CAF50'
-                }
-                if(progress < 25){
-                    color = ' #F44336'
-                }
-                if( progress >= 25 && progress < 50){
-                    color = '#FFC107'
-                }
-                if( progress >= 50 && progress < 75){
-                    color = '#FF9800'
-                }
-                if( progress >= 75 && progress <= 99){
-                    color = '#2196F3'
+                
+                switch (progress) {
+                    case progress === 100:
+                        color = '#4CAF50'
+                        break;
+                    case progress >= 25 && progress < 50:
+                        color = ' #F44336'
+                        break;
+                    case progress < 25:
+                        color = ' #F44336'
+                        break;
+                    case progress >= 50 && progress < 75:
+                        color = '#FF9800'
+                        break;
+                    case progress >= 75 && progress <= 99:
+                        color = '#2196F3'
+                        break;
+                    default:
+                        break;
                 }
                 return (
                     <ProgressContainer>
@@ -181,10 +190,10 @@ function CampaignManagement() {
     ];
     return (
         <Wrapper>
-            <Header style={{padding:'18px', backgroundColor:'white'}}>
+            <Header>
                 <OrderTitle>Campaign Management</OrderTitle>
                 <OrderRight>
-                    <Input  placeholder="Search for anything" prefix={<SearchOutlined />} style={inputStyle} />
+                    <InputStyle  placeholder="Search for anything" prefix={<SearchOutlined />}  />
                     <NewCampaign><PlusOutlined/> <ManageFont>New Campaign</ManageFont> </NewCampaign>
                 </OrderRight>
             </Header>

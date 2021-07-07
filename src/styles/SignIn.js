@@ -1,5 +1,6 @@
 import background from '../asset/img/signin.png'
 import styled from 'styled-components'
+import { Form, Input } from "antd";
 const blockStyle = styled.span`
     font-family:'Roboto';
     color:white;
@@ -47,13 +48,13 @@ const Subtitle = styled.span`
 const Header = styled(HeaderTop)`
     flex-direction:column
 `
-const formStyle = {
-    background: '#FFFFFF',
-    border: '1px solid #EBEBEB',
-    borderRadius: '4px',
-    height:'48px',
-    width:'448px'
-}
+const InputStyle = styled(Input)`
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB'
+    border-radius: 4px;
+    height:48px;
+    width:448px;
+`
 const Button = styled.button`
     background: #367BF5;
     border-radius: 4px;
@@ -69,4 +70,4 @@ const Button = styled.button`
 const ForgotPass = styled(blockStyle)`    
 `
 
-export {ForgotPass,Button,formStyle,Header,HeaderTop,Subtitle,Title,Image,Section,Wrapper}
+export {ForgotPass,Button,formStyle,Header,HeaderTop,Subtitle,Title,Image,Section,Wrapper ,InputStyle}

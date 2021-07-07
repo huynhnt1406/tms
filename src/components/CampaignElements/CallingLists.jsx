@@ -4,30 +4,30 @@ import { ItemFont, ListFont } from '../../styles/CampaignElementStyle/Fonts'
 import {DeleteOutlined, PlusOutlined, MinusOutlined} from '@ant-design/icons'
 import {Container,ContainerLeft,ContainerRight, Header} from '../../styles/CampaignElementStyle/MainElements'
 import {List} from 'antd';
-function CallingLists() {
 
-    const [callingList] = useState([
-        {
-            id:1,
-            title:'Calling List sản phẩm Lefery'
-        },
-        {
-            id:2,
-            title:'Calling List sản phẩm Garcinia'
-        },
-        {
-            id:3,
-            title:'Calling List sản phẩm Amulet2-vn'
-        },
-        {
-            id:4,
-            title:'Calling List sản phẩm vongdaibi-vn'
-        },
-        {
-            id:5,
-            title:'Calling List sản phẩm Penirum'
-        },
-    ]);
+const callingList = [
+    {
+        id:1,
+        title:'Calling List sản phẩm Lefery'
+    },
+    {
+        id:2,
+        title:'Calling List sản phẩm Garcinia'
+    },
+    {
+        id:3,
+        title:'Calling List sản phẩm Amulet2-vn'
+    },
+    {
+        id:4,
+        title:'Calling List sản phẩm vongdaibi-vn'
+    },
+    {
+        id:5,
+        title:'Calling List sản phẩm Penirum'
+    },
+]
+function CallingLists() {
     const [selectedList,setSelectedList] = useState([
     ]);
 

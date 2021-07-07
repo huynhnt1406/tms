@@ -5,6 +5,68 @@ import {ListFont, TableFont} from '../../styles/CampaignElementStyle/Fonts'
 import {SearchField} from '../../styles/CampaignElementStyle/Elements'
 import { ItemFont } from '../../styles/CampaignElementStyle/Fonts'
 import {List, Table} from 'antd'
+const strategy = [
+    {
+        id:1,
+        title:'Call Strategy 1',
+        data:{
+            key:1,
+            phone:12,
+            status:43,
+            attemp:51,
+            duration:14,
+            day:42
+        }
+    },
+    {
+        id:2,
+        title:'Call Strategy 2',
+        data:{
+            key:2,
+            phone:12,
+            status:43,
+            attemp:51,
+            duration:14,
+            day:42
+        }
+    },
+    {
+        id:3,
+        title:'Call Strategy 3',
+        data:{
+            key:3,
+            phone:12,
+            status:43,
+            attemp:51,
+            duration:14,
+            day:42
+        }
+    },
+    {
+        id:4,
+        title:'Call Strategy 4',
+        data:{
+            key:4,
+            phone:12,
+            status:43,
+            attemp:51,
+            duration:14,
+            day:42
+        }
+    },
+    {
+        id:5,
+        title:'Call Strategy 5',
+        data:{
+            key:5,
+            phone:12,
+            status:43,
+            attemp:51,
+            duration:14,
+            day:42
+        }
+    },
+]
 function CallStrategy() {
     const columns = [
         {
@@ -33,68 +95,6 @@ function CallStrategy() {
             key:'day'
         },
       ];
-    const [strategy] = useState([
-        {
-            id:1,
-            title:'Call Strategy 1',
-            data:{
-                key:1,
-                phone:12,
-                status:43,
-                attemp:51,
-                duration:14,
-                day:42
-            }
-        },
-        {
-            id:2,
-            title:'Call Strategy 2',
-            data:{
-                key:2,
-                phone:12,
-                status:43,
-                attemp:51,
-                duration:14,
-                day:42
-            }
-        },
-        {
-            id:3,
-            title:'Call Strategy 3',
-            data:{
-                key:3,
-                phone:12,
-                status:43,
-                attemp:51,
-                duration:14,
-                day:42
-            }
-        },
-        {
-            id:4,
-            title:'Call Strategy 4',
-            data:{
-                key:4,
-                phone:12,
-                status:43,
-                attemp:51,
-                duration:14,
-                day:42
-            }
-        },
-        {
-            id:5,
-            title:'Call Strategy 5',
-            data:{
-                key:5,
-                phone:12,
-                status:43,
-                attemp:51,
-                duration:14,
-                day:42
-            }
-        },
-    ])
     const [dataSource, setDataSource] = useState([])
     return (
         <CallStrategyStyle>

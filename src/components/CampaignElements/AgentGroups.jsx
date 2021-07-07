@@ -5,29 +5,29 @@ import { ItemFont, ListFont } from '../../styles/CampaignElementStyle/Fonts'
 import {DeleteOutlined,  PlusOutlined, MinusOutlined} from '@ant-design/icons'
 import {Container,ContainerLeft,ContainerRight, Header} from '../../styles/CampaignElementStyle/MainElements'
 import {List} from 'antd';
+const groups = [
+    {
+        id:1,
+        title:'Group 1'
+    },
+    {
+        id:2,
+        title:'Group 2'
+    },
+    {
+        id:3,
+        title:'Group 3'
+    },
+    {
+        id:4,
+        title:'Group 4'
+    },
+    {
+        id:5,
+        title:'Group 5'
+    },
+]
 function AgentGroups() {
-    const [groups] = useState([
-        {
-            id:1,
-            title:'Group 1'
-        },
-        {
-            id:2,
-            title:'Group 2'
-        },
-        {
-            id:3,
-            title:'Group 3'
-        },
-        {
-            id:4,
-            title:'Group 4'
-        },
-        {
-            id:5,
-            title:'Group 5'
-        },
-    ]);
     const [selectedGroups,setSelectedGroups] = useState([
     ]);
 
