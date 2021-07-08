@@ -6,6 +6,7 @@ import {OrderTitle, Wrapper, Header, OrderRight, InputStyle} from '../styles/Ord
 import {NewCampaign} from '../styles/CampaignElementStyle/Elements'
 import { ManageFont , TableFont } from '../styles/CampaignElementStyle/Fonts'
 import {ElementTable} from '../styles/CampaignElementStyle/Fonts'
+import { Link } from 'react-router-dom'
 const data = [
     {
         key:1,
@@ -95,7 +96,7 @@ function CampaignManagement() {
         title: <TableFont>ID</TableFont>,
         dataIndex: 'id',
         sorter: (a, b) => a.id - b.id,
-        render: (id) =>  <ElementTable style={{color:'#367BF5'}}>{id}</ElementTable>
+        render: (id) =>  <ElementTable style={{color:'#367BF5'}}><Link to="/campaign-manager/campaign-config">{id}</Link></ElementTable>
         },
         {
         key:'campaignname',

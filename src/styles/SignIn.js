@@ -1,6 +1,6 @@
-import background from '../asset/img/signin.png'
+
 import styled from 'styled-components'
-import { Form, Input } from "antd";
+import {Input , Button } from "antd";
 const blockStyle = styled.span`
     font-family:'Roboto';
     color:white;
@@ -10,7 +10,7 @@ const blockStyle = styled.span`
 `
 const Section =styled.section`
     min-height:100vh;
-    background:url(${background}) no-repeat center ;
+    background:url(${process.env.PUBLIC_URL + '/asset/img/signin.png'}) no-repeat center ;
     display:flex;
 `
 const HeaderTop =styled.div`
@@ -55,19 +55,10 @@ const InputStyle = styled(Input)`
     height:48px;
     width:448px;
 `
-const Button = styled.button`
-    background: #367BF5;
-    border-radius: 4px;
-    width:448px;
-    height:48px;
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FFFFFF;
-    border:none;
-`   
+const ButtonLogin = styled(Button)`
+    background: red;
+` 
 const ForgotPass = styled(blockStyle)`    
 `
 
-export {ForgotPass,Button,formStyle,Header,HeaderTop,Subtitle,Title,Image,Section,Wrapper ,InputStyle}
+export {ForgotPass,ButtonLogin,Header,HeaderTop,Subtitle,Title,Image,Section,Wrapper ,InputStyle}

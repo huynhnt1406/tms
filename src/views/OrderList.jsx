@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import {
   OrderTitle,
   Wrapper,
   Header,
   OrderRight,
-  inputStyle,
   Button,
   InputStyle,
 } from "../styles/OrderList";
 import { Table, Tag } from "antd";
 import { InfoCircleOutlined, EllipsisOutlined } from "@ant-design/icons";
 import { TableFont, ElementTable } from "../styles/CampaignElementStyle/Fonts";
+import {Link} from 'react-router-dom'
 const data = [];
 function OrderList() {
   const sorterItem = (a, b) => a.dataIndex - b.dataIndex;
@@ -23,7 +22,7 @@ function OrderList() {
       title: <TableFont>LEAD ID</TableFont>,
       dataIndex: "LEADID",
       sorter: sorterItem,
-      render: (LEADID) => <ElementTable>{LEADID}</ElementTable>,
+      render: (LEADID) => <ElementTable><Link to="/orderlist/orderprocessing">{LEADID}</Link></ElementTable>,
     },
     {
       key: "name",

@@ -1,16 +1,21 @@
-
-import styled from "styled-components";
 import 'antd/dist/antd.css';
 import OrderDetail from "./components/OrderDetail";
-
-const AppContainer = styled.div`
-`
-
+import {BrowserRouter as Router , Route ,Switch} from 'react-router-dom'
+import SignIn from "./components/SignIn";
 function App() {
   return (
-    <AppContainer>
-      <OrderDetail/>
-    </AppContainer>
+    <Router>
+    <Switch>
+      <div>
+          <Route exact path="/">
+            <OrderDetail/>
+          </Route>
+          <Route path="/login">
+            <SignIn/>
+          </Route>
+      </div>
+      </Switch>
+    </Router>
   );
 }
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import {Input} from 'antd'
 const Font = styled.span`
     font-family:Roboto;
     font-weight:400;
@@ -65,7 +65,7 @@ const ChildLeft = styled.div`
 const ChildRight = styled.div`
     flex:0.75;
 `
-const InputField = styled.input`
+const InputStyle = styled(Input)`
     background: #F1F3F4;
     border: 1px solid #E3E5E6;
     box-sizing: border-box;
@@ -78,10 +78,10 @@ const InputField = styled.input`
     outline:none;
     text-align:flex-start;
 `
-const PhoneInput = styled(InputField)`
+const PhoneInput = styled(InputStyle)`
     width:357px;
 `
-const AddressInput = styled(InputField)`
+const AddressInput = styled(InputStyle)`
     background:white;
     height:56px;
     margin-top:10px;
@@ -97,7 +97,7 @@ const DesByOrderInput = styled(AddressInput)`
     background-color:#F1F3F4;
     margin-top:10px;
 `
-const PaymentInput = styled(InputField)`
+const PaymentInput = styled(InputStyle)`
     margin-top:10px;
 `
 const IconStyle = {
@@ -120,4 +120,4 @@ const CascaderStyle = {
     background:'#FFFFFF',
     border: '1px solid #E3E5E6',
 }
-export {InputFont,DatetimeFont,HeaderFont,Font, Id,DateandTime,InfoCustomer, Field1, ContactStyle, Field,ChildLeft,ChildRight, Child, InputField, PhoneInput, IconStyle, Element,  CascaderStyle ,AddressInput, DescInput,DesInput,DesByOrderInput,PaymentInput,TableProduct, ProductInfo}
+export {InputFont,DatetimeFont,HeaderFont,Font, Id,DateandTime,InfoCustomer,PhoneInput, Field1, ContactStyle, Field,ChildLeft,ChildRight, Child, InputStyle , IconStyle, Element,  CascaderStyle ,AddressInput, DescInput,DesInput,DesByOrderInput,PaymentInput,TableProduct, ProductInfo}

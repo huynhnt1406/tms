@@ -19,19 +19,18 @@ import {
   AddProduct,
   TableFooter,
   ButtonStyle,
-  InputStyle,
   TabsStyle,
-  TabPaneStyle
+  TabPaneStyle,
+  InputStyle
 } from "../styles/OrderProcessing";
 import { ProductInfo, TableProduct } from "../styles/Contact";
-import { Table, Cascader, Input, Button, Tabs } from "antd";
+import { Table, Cascader,Tabs } from "antd";
 import {
   EllipsisOutlined,
   CheckOutlined,
   DeleteOutlined,
   FrownOutlined,
 } from "@ant-design/icons";
-import alertinfo from "../asset/img/alert.jpg";
 import Tags from "../components/Tags";
 function OrderProcessing() {
   const columns = [
@@ -59,7 +58,7 @@ function OrderProcessing() {
       title: (
         <span>
           QTY
-          <img alt="" src={alertinfo} />
+          <img alt="" src={process.env.PUBLIC_URL + '/asset/img/alert.jpg'} />
         </span>
       ),
       dataIndex: "qty",

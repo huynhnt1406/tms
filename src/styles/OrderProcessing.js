@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { Header, OrderRight, OrderTitle } from "../styles/OrderList";
-import { Table, Cascader, Input, Button, Tabs } from "antd";
+import { Input, Button, Tabs } from "antd";
 const { TabPane } = Tabs;
 
 
 const TabsStyle = styled(Tabs)`
   height: 180px;
 `;
-const TabPaneStyle = styled(Tabpane)`
+const TabPaneStyle = styled(TabPane)`
     textAlign: center; 
     color: #C6CACC;
 `
@@ -126,5 +126,6 @@ export {
   TableFooter,
   ButtonStyle,
   TabsStyle,
-  TabPaneStyle
+  TabPaneStyle,
+  InputStyle
 };

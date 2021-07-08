@@ -45,6 +45,7 @@ const ContentStyle = styled(Content)`
     padding: 0 10px 10px 10px;
     minHeight: 280;
     background: #F0F2F5;
+    overflow:scroll;
 `;
 
 const ToggleStyle = styled.span`

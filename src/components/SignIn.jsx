@@ -1,7 +1,4 @@
 import React from "react";
-import logo from "../asset/img/logo.png";
-import username from "../asset/img/username.png";
-import password from "../asset/img/password.png";
 import { Form} from "antd";
 import {
   Section,
@@ -9,11 +6,10 @@ import {
   HeaderTop,
   Header,
   ForgotPass,
-  Button,
+  ButtonLogin,
   Subtitle,
   Title,
   Image,
-  formStyle,
   InputStyle,
 } from "../styles/SignIn";
 function SignIn() {
@@ -22,7 +18,7 @@ function SignIn() {
       <Wrapper>
         <Header>
           <HeaderTop>
-            <Image src={logo} />
+            <Image src={process.env.PUBLIC_URL + '/asset/img/logo.png'} />
             <Title>Telesales Management System</Title>
           </HeaderTop>
           <Subtitle>Please login to continue.</Subtitle>
@@ -38,7 +34,7 @@ function SignIn() {
             ]}
           >
             <InputStyle
-              prefix={<img alt="username" src={username} />}
+              prefix={<img alt="username" src={process.env.PUBLIC_URL + '/asset/img/username.png'} />}
               placeholder="Username"
             />
           </Form.Item>
@@ -52,13 +48,13 @@ function SignIn() {
             ]}
           >
             <InputStyle
-              prefix={<img alt="password" src={password} />}
+              prefix={<img alt="password" src={process.env.PUBLIC_URL + '/asset/img/password.png'} />}
               suffix="SHOW"
               placeholder="Password"
             />
           </Form.Item>
           <Form.Item>
-            <Button>Sign In</Button>
+            <ButtonLogin>Sign In</ButtonLogin>
           </Form.Item>
         </Form>
         <ForgotPass>You Forgot Password?</ForgotPass>

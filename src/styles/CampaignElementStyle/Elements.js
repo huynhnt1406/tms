@@ -15,15 +15,15 @@ const Input = styled.input`
   outline: none;
 `;
 const DatePickerStyle = styled(DatePicker)`
-    background: #F7F9FA,
-    border-radius: 4px 4px 0px 0px,
-    width:437px,
-    height:40px,
-    border-bottom:1px solid #C6CACC,
-    border-top:none,
-    border-right:none,
-    border-left:none,
-    margin-bottom:12px
+    background: #F7F9FA;
+    border-radius: 4px 4px 0px 0px;
+    width:437px;
+    height:40px;
+    border-bottom:1px solid #C6CACC;
+    border-top:none;
+    border-right:none;
+    border-left:none;
+    margin-bottom:12px;
 `;
 const CampaignNameStyle = styled.div`
     flex:0.6;

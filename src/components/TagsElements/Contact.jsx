@@ -1,9 +1,7 @@
 import React from 'react'
-import { Font,DatetimeFont,HeaderFont ,Id, Field1,InfoCustomer,DateandTime, ContactStyle,Field,ChildLeft,ChildRight, Child, InputField, PhoneInput,IconStyle,Element, AddressInput, DescInput,DesInput,DesByOrderInput,PaymentInput } from '../../styles/Contact'
+import { Font,DatetimeFont,HeaderFont, InputStyle ,Id, Field1,InfoCustomer,DateandTime, ContactStyle,Field,ChildLeft,ChildRight, Child, PhoneInput,IconStyle,Element, AddressInput, DescInput,DesInput,DesByOrderInput,PaymentInput } from '../../styles/Contact'
 import {InfoCircleOutlined} from '@ant-design/icons'
 import {Tag} from 'antd'
-import phone1 from '../../asset/img/phone1.png'
-import phone2 from '../../asset/img/phone2.png'
 function Contact() {
     return (
         <ContactStyle>
@@ -25,7 +23,7 @@ function Contact() {
                         <Font>Name:</Font>
                     </ChildLeft>
                     <ChildRight>
-                        <InputField placeholder="Trần Văn Đức"/>
+                        <InputStyle  placeholder="Trần Văn Đức"/>
                     </ChildRight>
                 </Child>
                 <Child>
@@ -34,10 +32,10 @@ function Contact() {
                     </ChildLeft>
                     <ChildRight>
                         <Element>
-                        <PhoneInput placeholder="0123456789"/><img alt="" src={phone1} style={IconStyle} />
+                        <PhoneInput placeholder="0123456789"/><img alt="" src={process.env.PUBLIC_URL + '/asset/img/phone1.png'} style={IconStyle} />
                         </Element>
                         <Element>
-                        <PhoneInput placeholder="0987654321"/><img alt="" src={phone2} style={IconStyle}  />
+                        <PhoneInput placeholder="0987654321"/><img alt="" src={process.env.PUBLIC_URL + '/asset/img/phone2.png'} style={IconStyle}  />
                         </Element>
                     </ChildRight>
                 </Child>
