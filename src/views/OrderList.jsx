@@ -12,10 +12,20 @@ import { Table, Tag } from "antd";
 import { InfoCircleOutlined, EllipsisOutlined } from "@ant-design/icons";
 import { TableFont, ElementTable } from "../styles/CampaignElementStyle/Fonts";
 import {Link} from 'react-router-dom'
-const data = [];
 function OrderList() {
   const sorterItem = (a, b) => a.dataIndex - b.dataIndex;
   const [selectedRowKeys] = useState([]);
+  const data = [
+    {
+      key:1,
+      LEADID:123456,
+      name:'Nguyen Thanh Huynh',
+      productname:'iphone12',
+      status:'Approved',
+      codfee:100000,
+      address:'Trieu Khuc Thanh Xuan Ha Noi'
+    }
+  ]
   const columns = [
     {
       key: "LEADID",

@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import {CallStrategyStyle} from '../../styles/CampaignElementStyle/Elements'
+import {ParentStyle} from '../../styles/CampaignElementStyle/Elements'
 import { Container, ContainerLeft , ContainerRight, Header} from '../../styles/CampaignElementStyle/MainElements'
 import {ListFont, TableFont} from '../../styles/CampaignElementStyle/Fonts'
 import {SearchField} from '../../styles/CampaignElementStyle/Elements'
 import { ItemFont } from '../../styles/CampaignElementStyle/Fonts'
 import {List, Table} from 'antd'
+import {SearchOutlined} from '@ant-design/icons'
 const strategy = [
     {
         id:1,
@@ -97,12 +98,12 @@ function CallStrategy() {
       ];
     const [dataSource, setDataSource] = useState([])
     return (
-        <CallStrategyStyle>
+        <ParentStyle>
             <Container>
                 <ContainerLeft>
                     <Header>
                         <ListFont>Select Call Strategy</ListFont>
-                        <SearchField placeholder="Search calling list"/>
+                        <SearchField  prefix={<SearchOutlined />} placeholder="Search calling list"/>
                     </Header>
                     <List>
                         {
@@ -116,7 +117,7 @@ function CallStrategy() {
                     <Table dataSource={dataSource}  columns={columns} size="small" pagination={false} scroll={{ y: 500 }} />
                 </ContainerRight>
             </Container>
-        </CallStrategyStyle>
+        </ParentStyle>
     )
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { RuleStyle, RadioStyle ,DescStyle } from '../../styles/CampaignElementStyle/Elements'
+import {  RadioStyle ,DescStyle, ParentStyle } from '../../styles/CampaignElementStyle/Elements'
 import { Container ,RuleRight,RuleLeft, Header,BodyRule } from '../../styles/CampaignElementStyle/MainElements'
 import {ListFont, RadioFont} from '../../styles/CampaignElementStyle/Fonts'
 import { Radio} from 'antd';
@@ -39,7 +39,7 @@ function DistributionRule() {
     };
     const [desc, setDesc] = useState('Last in, first out (LIFO) is a method used to account for inventory that records the most recently produced items as sold first. Under LIFO, the cost of the most recent products purchased (or produced) are the first to be expensed as cost of goods sold (COGS), which means the lower cost of older products will be reported as inventory')
     return (
-        <RuleStyle>
+        <ParentStyle>
             <Container>
                 <RuleLeft>
                     <Header>
@@ -62,7 +62,7 @@ function DistributionRule() {
                     </BodyRule>
                 </RuleRight>
             </Container>
-        </RuleStyle>
+        </ParentStyle>
     )
 }
 

@@ -1,11 +1,11 @@
 import React from 'react'
-import { SummaryStyle } from '../../styles/CampaignElementStyle/Elements'
+import { ParentStyle } from '../../styles/CampaignElementStyle/Elements'
 
 function Summary() {
     return (
-        <SummaryStyle>
+        <ParentStyle>
             <h1>This is summary page</h1>
-        </SummaryStyle>
+        </ParentStyle>
     )
 }
 

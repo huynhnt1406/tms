@@ -32,6 +32,7 @@ import {
   FrownOutlined,
 } from "@ant-design/icons";
 import Tags from "../components/Tags";
+import {Link} from 'react-router-dom'
 function OrderProcessing() {
   const columns = [
     {
@@ -94,7 +95,7 @@ function OrderProcessing() {
           <TitleProcess>Order Processing</TitleProcess>
           <Breadcrumb>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>Orders List</Breadcrumb.Item>
+            <Breadcrumb.Item><Link to="/">Orders List</Link></Breadcrumb.Item>
             <Breadcrumb.Item>Orders Processing</Breadcrumb.Item>
           </Breadcrumb>
         </OrderLeft>
@@ -126,15 +127,12 @@ function OrderProcessing() {
             <TableFooter>
               <Cascader
                 placeholder="Select product"
-                style={{ height: "32px", width: "130px", marginRight: "20px" }}
               />
               <Cascader
                 placeholder="Select stock"
-                style={{ height: "32px", width: "120px", marginRight: "20px" }}
               />
               <Cascader
                 placeholder="Price"
-                style={{ height: "32px", width: "70px", marginRight: "30px" }}
               />
               <InputStyle
                 placeholder="Quantity"

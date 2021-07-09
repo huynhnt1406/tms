@@ -148,25 +148,21 @@ function CampaignManagement() {
             dataIndex: 'progress',
             render: (progress) => {
                 let color = '';
-                
-                switch (progress) {
-                    case progress === 100:
-                        color = '#4CAF50'
-                        break;
-                    case progress >= 25 && progress < 50:
-                        color = ' #F44336'
-                        break;
-                    case progress < 25:
-                        color = ' #F44336'
-                        break;
-                    case progress >= 50 && progress < 75:
-                        color = '#FF9800'
-                        break;
-                    case progress >= 75 && progress <= 99:
-                        color = '#2196F3'
-                        break;
-                    default:
-                        break;
+
+                if(progress === 100){
+                    color = '#4CAF50'
+                }
+                if(progress >= 25 && progress < 50){
+                    color = ' #F44336'
+                }
+                if(progress < 25){
+                    color = ' #F44336'
+                }
+                if(progress >= 50 && progress < 75){
+                    color = '#FF9800'
+                }
+                if(progress >= 75 && progress <= 99){
+                    color = '#2196F3'
                 }
                 return (
                     <ProgressContainer>

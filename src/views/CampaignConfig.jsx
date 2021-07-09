@@ -22,6 +22,7 @@ import CallStrategy from "../components/CampaignElements/CallStrategy";
 import AgentGroups from "../components/CampaignElements/AgentGroups";
 import DistributionRule from "../components/CampaignElements/DistributionRule";
 import Summary from "../components/CampaignElements/Summary";
+import {Link} from 'react-router-dom'
 const steps = [
   {
     title: "Campaign Name",
@@ -64,7 +65,7 @@ function CampaignConfig() {
         <CampaignTitle>Campaign Configurations</CampaignTitle>
         <Breadcrumb>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>Campaign</Breadcrumb.Item>
+          <Breadcrumb.Item><Link to="/campaign-manager">Campaign</Link></Breadcrumb.Item>
           <Breadcrumb.Item>Campaign Configurations</Breadcrumb.Item>
         </Breadcrumb>
       </CampaignHeader>

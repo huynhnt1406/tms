@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import {CallingListsStyle, RemoveButton, SearchField} from '../../styles/CampaignElementStyle/Elements'
+import { ParentStyle, RemoveButton, SearchField} from '../../styles/CampaignElementStyle/Elements'
 import { ItemFont, ListFont } from '../../styles/CampaignElementStyle/Fonts'
 import {DeleteOutlined, PlusOutlined, MinusOutlined} from '@ant-design/icons'
 import {Container,ContainerLeft,ContainerRight, Header} from '../../styles/CampaignElementStyle/MainElements'
+import {SearchOutlined} from '@ant-design/icons'
 import {List} from 'antd';
 
 const callingList = [
@@ -35,12 +36,12 @@ function CallingLists() {
         setSelectedList((selectedList.filter(item => item.id !== id)))
     }
     return (
-        <CallingListsStyle>
+        <ParentStyle>
             <Container>
                 <ContainerLeft>
                     <Header>
                         <ListFont>Calling List</ListFont>
-                        <SearchField placeholder="Search calling list"/>
+                        <SearchField prefix={<SearchOutlined/>} placeholder="Search calling list"/>
                     </Header>
                     <List>
                         {
@@ -53,18 +54,18 @@ function CallingLists() {
                 <ContainerRight>
                     <Header>
                         <ListFont>Selected</ListFont>
-                        <RemoveButton><DeleteOutlined/> Remove All</RemoveButton>
+                        <RemoveButton onClick={() => setSelectedList([])}><DeleteOutlined/> Remove All</RemoveButton>
                     </Header>
                     <List>
                         {
-                            selectedList.map((item) => (
+                            selectedList.length > 0 ? (selectedList.map((item) => (
                                 <List.Item key={item.id} style={{padding:'16px'}}>< MinusOutlined onClick={ () => RemoveCallingItem(item.id)} style={{border:'1px solid gray', marginRight:'22.8px'}}/> <ItemFont>{item.title}</ItemFont></List.Item>
-                            ))
+                            ))) : ("")
                         }
                     </List>
                 </ContainerRight>
             </Container>
-        </CallingListsStyle>
+        </ParentStyle>
     )
 }
 

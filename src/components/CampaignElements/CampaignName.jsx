@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 import {
-  Input,
+  InputStyle,
   CampaignNameStyle,
   CampaignForm,
   DatePickerStyle
@@ -20,7 +20,7 @@ function CampaignName() {
             <MainFont>Campaign Name:</MainFont>
           </ChildLeft>
           <ChildRight>
-            <Input placeholder="Enter Your Compaign Name" />
+            <InputStyle placeholder="Enter Your Compaign Name" />
           </ChildRight>
         </Child>
         <Child>
@@ -28,7 +28,7 @@ function CampaignName() {
             <MainFont>Campaign Id:</MainFont>
           </ChildLeft>
           <ChildRight>
-            <Input placeholder="Enter Your Compaign ID" />
+            <InputStyle placeholder="Enter Your Compaign ID" />
           </ChildRight>
         </Child>
         <Child>

@@ -56,7 +56,8 @@ const InputStyle = styled(Input)`
     width:448px;
 `
 const ButtonLogin = styled(Button)`
-    background: red;
+    background: #367BF5;
+    padding:15px 200px;
 ` 
 const ForgotPass = styled(blockStyle)`    
 `
